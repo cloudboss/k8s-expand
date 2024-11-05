@@ -1,0 +1,19 @@
+[package]
+description = "A library to expand variables in the style of Kubernetes pod manifests."
+edition = "2021"
+keywords = ["shellexpand", "kubernetes", "variables"]
+license = "MIT"
+name = "k8s-expand"
+repository = "https://github.com/cloudboss/k8s-expand"
+version = "0.1.0"
+
+[dependencies]
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["html_reports"] }
+pprof = { version = "0.13.0", features = ["criterion", "flamegraph"] }
+pretty_assertions = "1.4.1"
+
+[[bench]]
+name = "lib"
+harness = false
